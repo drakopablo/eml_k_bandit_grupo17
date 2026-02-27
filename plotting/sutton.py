@@ -50,3 +50,14 @@ def plot_reward_distributions(arms, samples_per_arm=1000):
     plt.xticks(range(k), range(1, k+1))
     plt.tight_layout()
     plt.show()
+
+# MEJORA EN EL EJE X:
+    ax = plt.gca()
+    # Si k es grande, solo mostramos etiquetas cada cierto intervalo
+    if k > 20:
+        ax.xaxis.set_major_locator(ticker.MaxNLocator(20))
+    else:
+        plt.xticks(range(k), range(1, k+1))
+        
+    plt.tight_layout()
+    plt.show()
