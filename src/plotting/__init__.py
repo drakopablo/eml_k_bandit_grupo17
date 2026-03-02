@@ -13,13 +13,15 @@ For more details about GPL-3.0: https://www.gnu.org/licenses/gpl-3.0.html
 """
 
 # Importación de módulos o clases
-from .plotting import plot_average_rewards, plot_optimal_selections
+from .plotting import plot_average_rewards, plot_optimal_selections, plot_arm_statistics, plot_regret
 from .comparison import compare_best_temperatures, compute_scores
 
 # Lista de módulos o clases públicas
 __all__ = [
     'plot_average_rewards',
     'plot_optimal_selections',
+    'plot_arm_statistics', # Watch out for this two
+    'plot_regret',
     'compare_best_temperatures',
     'compute_scores',
 ]
