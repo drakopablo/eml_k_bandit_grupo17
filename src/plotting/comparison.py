@@ -13,9 +13,6 @@ if TYPE_CHECKING:
     from arms import Bandit
     from algorithms import Algorithm
 
-# ── Importar run_experiment desde el nivel superior ──
-import sys
-sys.path.append('..')
 from main import run_experiment  # o donde esté definida
 
 
@@ -62,7 +59,7 @@ def select_best(
     Asume que los algoritmos tienen un atributo `.temperature` (Softmax)
     o `.epsilon` (ε-greedy). Extender para UCB si es necesario.
     """
-    from main import run_experiment  # importación local para evitar circular
+    from eml_k_bandit_grupo17.src.plotting.main import run_experiment  # importación local para evitar circular
     
     rewards, _ = run_experiment(bandit, algorithms, steps, runs)
     scores     = compute_scores(rewards, criterion)
